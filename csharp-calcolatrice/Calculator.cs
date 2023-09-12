@@ -37,5 +37,34 @@ namespace csharp_calcolatrice
         {
             return firstMultiply * secondMultiply;
         }
+
+        public static int AbsoluteIntValue(int number)
+        {
+            if (number == 0) {
+                return 0;
+            }
+            else if (number > 0){
+                return number;
+            }
+            else {
+                return number += number * (-2);
+            }
+        }
+
+        public static double AbsoluteDoubleValue(double number)
+        {
+            if (number == 0)
+            {
+                return 0;
+            }
+            else if (number > 0)
+            {
+                return number;
+            }
+            else
+            {
+                return number += number * (-2);
+            }
+        }
     }
 }
