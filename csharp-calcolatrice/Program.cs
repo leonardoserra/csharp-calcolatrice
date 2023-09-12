@@ -91,6 +91,7 @@
             Console.WriteLine(Calculator.IntegerPower(6,0));
             Console.WriteLine(Calculator.IntegerPower(0,0));
             Console.WriteLine(Calculator.IntegerPower(-2,8));
+            Console.WriteLine(Calculator.IntegerPower(2,8));
             Console.WriteLine(Calculator.IntegerPower(2,-8));
             Console.WriteLine();
 

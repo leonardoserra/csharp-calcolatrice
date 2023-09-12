@@ -98,24 +98,30 @@ namespace csharp_calcolatrice
                 return secondNumber;
         }
 
-        public static int IntegerPower(int baseNumber, int exponent)
+        public static double IntegerPower(int baseNumber, int exponent)
         {
             int result = baseNumber;
-            if (exponent != 0)
+            if (result == 0 || exponent == 0)
+            {
+                return 1;
+            }
+            else if (exponent < 0)
+            {
+                //converto l'esponente negativo in positivo
+                exponent -= (exponent * -2);
+                for (int i = 1; i > exponent; i++)
+                {
+                    result *= baseNumber;
+                }
+                return 1 / result;
+
+            }
+            else
             {
                 for (int i = 1; i < exponent; i++)
                 {
                     result *= baseNumber;
                 }
-
-            }
-            else if (result == 0)
-            {
-                return 1;
-            }
-            else if(exponent == 0)
-            {
-                return 1;
             }
 
             return result;
