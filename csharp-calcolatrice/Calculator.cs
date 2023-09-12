@@ -98,6 +98,16 @@ namespace csharp_calcolatrice
                 return secondNumber;
         }
 
+        public static int IntegerPower(int baseNumber, int exponent)
+        {
+            int result = baseNumber;
+            for (int i = 0; i < exponent; i++)
+            {
+                result *= baseNumber;
+            }
+            return baseNumber;
+        }
+
 
 
     }

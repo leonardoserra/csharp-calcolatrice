@@ -87,6 +87,11 @@
             Console.WriteLine(Calculator.MaxDoubleComparator(-8.67, -8.67));
             Console.WriteLine();
 
+            Console.WriteLine("BONUS potenza di intero");
+            Console.WriteLine(Calculator.IntegerPower(2,2));
+            Console.WriteLine(Calculator.IntegerPower(2,3));
+            Console.WriteLine();
+
 
         }
     }
