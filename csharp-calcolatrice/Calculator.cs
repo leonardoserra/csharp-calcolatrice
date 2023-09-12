@@ -101,11 +101,24 @@ namespace csharp_calcolatrice
         public static int IntegerPower(int baseNumber, int exponent)
         {
             int result = baseNumber;
-            for (int i = 0; i < exponent; i++)
+            if (exponent != 0)
             {
-                result *= baseNumber;
+                for (int i = 1; i < exponent; i++)
+                {
+                    result *= baseNumber;
+                }
+
             }
-            return baseNumber;
+            else if (result == 0)
+            {
+                return 1;
+            }
+            else if(exponent == 0)
+            {
+                return 1;
+            }
+
+            return result;
         }
 
 
