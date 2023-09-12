@@ -10,12 +10,14 @@ namespace csharp_calcolatrice
     {
         public static int IntegerSum(int firstAddend, int secondAddend)
         {
-           
-                if(firstAddend is Int32 && secondAddend is Int32) 
                     return firstAddend + secondAddend;
-                else
-                    throw new Exception("Use only Integer");
-            
+           
+        }
+
+        public static double DoubleSum(double firstAddend, double secondAddend)
+        {
+            return firstAddend + secondAddend;
+
         }
     }
 }
