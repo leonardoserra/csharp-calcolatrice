@@ -2,28 +2,21 @@
 using System.Collections.Generic;
 using System.ComponentModel.Design;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Generics_csharp_calcolatrice
 {
     internal static class Calculator
-    {
-        public static T IntegerSum<T>(T firstAddend, T secondAddend)
+    { 
+        public static T Sum<T>(T firstAddend, T secondAddend) where T : INumber<T>
         {
-            List<T> sum = new List<T>;
-            sum.Add(firstAddend);
-            sum.Add(secondAddend);
-            sum.Sum();
+           return firstAddend + secondAddend;
 
         }
 
-        public static double DoubleSum(double firstAddend, double secondAddend)
-        {
-            return firstAddend + secondAddend;
-        }
-
-        public static int IntegerSubtractor(int firstSubtracting, int secondSubtracting)
+        public static T Subtractor<T>(T firstSubtracting, T secondSubtracting)where T : INumber<T> 
         {
             return firstSubtracting - secondSubtracting;
         }
