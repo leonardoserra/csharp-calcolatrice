@@ -88,11 +88,11 @@
             Console.WriteLine();
 
             Console.WriteLine("BONUS potenza di intero");
-            Console.WriteLine(Calculator.IntegerPower(6,0));
-            Console.WriteLine(Calculator.IntegerPower(0,0));
-            Console.WriteLine(Calculator.IntegerPower(-2,8));
-            Console.WriteLine(Calculator.IntegerPower(2,8));
-            Console.WriteLine(Calculator.IntegerPower(2,-8));
+            Console.WriteLine(Calculator.NumberPower(6,0));
+            Console.WriteLine(Calculator.NumberPower(0,0));
+            Console.WriteLine(Calculator.NumberPower(-2,8));
+            Console.WriteLine(Calculator.NumberPower(2,3));
+            Console.WriteLine(Calculator.NumberPower(2,-3));
             Console.WriteLine();
 
 

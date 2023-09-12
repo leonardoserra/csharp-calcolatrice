@@ -98,7 +98,7 @@ namespace csharp_calcolatrice
                 return secondNumber;
         }
 
-        public static double IntegerPower(int baseNumber, int exponent)
+        public static double NumberPower(int baseNumber, int exponent)
         {
             int result = baseNumber;
             if (result == 0 || exponent == 0)
@@ -108,12 +108,12 @@ namespace csharp_calcolatrice
             else if (exponent < 0)
             {
                 //converto l'esponente negativo in positivo
-                exponent -= (exponent * -2);
-                for (int i = 1; i > exponent; i++)
+                exponent = -exponent;
+                for (int i = 1; i < exponent; i++)
                 {
                     result *= baseNumber;
                 }
-                return 1 / result;
+                return (double)1 / (double)result;
 
             }
             else
