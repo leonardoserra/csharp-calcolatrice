@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace csharp_calcolatrice
+namespace Generics_csharp_calcolatrice
 {
-    internal static class Calculator
+    internal static class Calculator<T>
     {
         public static int IntegerSum(int firstAddend, int secondAddend)
         {
