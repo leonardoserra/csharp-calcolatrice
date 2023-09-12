@@ -13,7 +13,6 @@ namespace Generics_csharp_calcolatrice
         public static T Sum<T>(T firstAddend, T secondAddend) where T : INumber<T>
         {
            return firstAddend + secondAddend;
-
         }
 
         public static T Subtractor<T>(T firstSubtracting, T secondSubtracting)where T : INumber<T> 
@@ -21,42 +20,24 @@ namespace Generics_csharp_calcolatrice
             return firstSubtracting - secondSubtracting;
         }
 
-        public static double DoubleSubtractor(double firstSubtracting, double secondSubtracting)
-        {
-            return firstSubtracting - secondSubtracting;
-        }
 
-        public static int IntegerMultiplier(int firstMultiply, int secondMultiply)
+        public static T Multiplier<T>(T firstMultiply, T secondMultiply) where T : INumber<T>
         {
             return firstMultiply * secondMultiply;
         }
 
-        public static double DoubleMultiplier(double firstMultiply, double secondMultiply)
-        {
-            return firstMultiply * secondMultiply;
-        }
 
-        public static int AbsoluteIntValue(int number)
+        public static T AbsoluteValue<T>(T number) where T : INumber<T>
         {
-            if (number == 0) 
-                return 0;
-            else if (number > 0)
-                return number;
-            else 
-                return number += number * (-2);
-        }
-
-        public static double AbsoluteDoubleValue(double number)
-        {
-            if (number == 0)
-                return 0;
-            else if (number > 0)
+            if (number == default(T))
+                return default(T);
+            else if (number > default(T))
                 return number;
             else
-                return number += number * (-2);
+                return -number;
         }
 
-        public static int MinIntComparator(int firstNumber, int secondNumber)
+        public static T MinComparator<T>(T firstNumber, T secondNumber)where T: INumber<T>
         {
             if (firstNumber < secondNumber)
                 return firstNumber;
@@ -66,17 +47,8 @@ namespace Generics_csharp_calcolatrice
                 return secondNumber;
         }
 
-        public static double MinDoubleComparator(double firstNumber, double secondNumber)
-        {
-            if (firstNumber < secondNumber)
-                return firstNumber;
-            else if (firstNumber == secondNumber)
-                return firstNumber;
-            else
-                return secondNumber;
-        }
 
-        public static int MaxIntComparator(int firstNumber, int secondNumber)
+        public static T MaxComparator<T>(T firstNumber, T secondNumber)where T : INumber<T>
         {
             if (firstNumber > secondNumber)
                 return firstNumber;
@@ -86,28 +58,18 @@ namespace Generics_csharp_calcolatrice
                 return secondNumber;
         }
 
-        public static double MaxDoubleComparator(double firstNumber, double secondNumber)
+        public static T NumberPower<T>(T baseNumber, T exponent)where T : INumber<T>
         {
-            if (firstNumber > secondNumber)
-                return firstNumber;
-            else if (firstNumber == secondNumber)
-                return firstNumber;
-            else
-                return secondNumber;
-        }
-
-        public static double NumberPower(int baseNumber, int exponent)
-        {
-            double result = baseNumber;
-            if (result == 0 || exponent == 0)
+            T result = baseNumber;
+            if (result == default(T) || exponent == default(T))
             {
                 return 1;
             }
-            else if (exponent < 0)
+            else if (exponent < default(T))
             {
                 //converto l'esponente negativo in positivo
                 exponent = -exponent;
-                for (int i = 1; i < exponent; i++)
+                for (T i = default(T)+ 1; i < exponent; i++)
                 {
                     result *= baseNumber;
                 }
