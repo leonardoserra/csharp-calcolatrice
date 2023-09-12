@@ -1,16 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Generics_csharp_calcolatrice
 {
-    internal static class Calculator<T>
+    internal static class Calculator
     {
-        public static int IntegerSum(int firstAddend, int secondAddend)
+        public static T IntegerSum<T>(T firstAddend, T secondAddend)
         {
-            return firstAddend + secondAddend;
+            List<T> sum = new List<T>;
+            sum.Add(firstAddend);
+            sum.Add(secondAddend);
+            sum.Sum();
+
         }
 
         public static double DoubleSum(double firstAddend, double secondAddend)
