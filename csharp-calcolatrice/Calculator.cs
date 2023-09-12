@@ -40,31 +40,65 @@ namespace csharp_calcolatrice
 
         public static int AbsoluteIntValue(int number)
         {
-            if (number == 0) {
+            if (number == 0) 
                 return 0;
-            }
-            else if (number > 0){
+            else if (number > 0)
                 return number;
-            }
-            else {
+            else 
                 return number += number * (-2);
-            }
         }
 
         public static double AbsoluteDoubleValue(double number)
         {
             if (number == 0)
-            {
                 return 0;
-            }
             else if (number > 0)
-            {
                 return number;
-            }
             else
-            {
                 return number += number * (-2);
-            }
         }
+
+        public static int MinIntComparator(int firstNumber, int secondNumber)
+        {
+            if (firstNumber < secondNumber)
+                return firstNumber;
+            else if (firstNumber == secondNumber)
+                return firstNumber;
+            else
+                return secondNumber;
+        }
+
+        public static double MinDoubleComparator(double firstNumber, double secondNumber)
+        {
+            if (firstNumber < secondNumber)
+                return firstNumber;
+            else if (firstNumber == secondNumber)
+                return firstNumber;
+            else
+                return secondNumber;
+        }
+
+        public static int MaxIntComparator(int firstNumber, int secondNumber)
+        {
+            if (firstNumber > secondNumber)
+                return firstNumber;
+            else if (firstNumber == secondNumber)
+                return firstNumber;
+            else
+                return secondNumber;
+        }
+
+        public static double MaxDoubleComparator(double firstNumber, double secondNumber)
+        {
+            if (firstNumber > secondNumber)
+                return firstNumber;
+            else if (firstNumber == secondNumber)
+                return firstNumber;
+            else
+                return secondNumber;
+        }
+
+
+
     }
 }
