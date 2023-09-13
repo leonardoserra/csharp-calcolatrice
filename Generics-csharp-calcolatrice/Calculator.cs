@@ -58,18 +58,18 @@ namespace Generics_csharp_calcolatrice
                 return secondNumber;
         }
 
-        public static T NumberPower<T>(T baseNumber, T exponent)where T : INumber<T>
+        public static double NumberPower(int baseNumber, int exponent)
         {
-            T result = baseNumber;
-            if (result == default(T) || exponent == default(T))
+            double result = baseNumber;
+            if (result == 0 || exponent == 0)
             {
                 return 1;
             }
-            else if (exponent < default(T))
+            else if (exponent < 0)
             {
                 //converto l'esponente negativo in positivo
                 exponent = -exponent;
-                for (T i = default(T)+ 1; i < exponent; i++)
+                for (int i = 1; i < exponent; i++)
                 {
                     result *= baseNumber;
                 }
@@ -86,8 +86,6 @@ namespace Generics_csharp_calcolatrice
 
             return result;
         }
-
-
 
     }
 }

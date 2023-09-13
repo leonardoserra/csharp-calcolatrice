@@ -5,9 +5,9 @@
         
         static void Main(string[] args)
         {
-            //IL PRINCIPIO CHE RICHIEDE LA CONSEGNA È IL POLIMORFISMO, QUANDO CREI PIU FIRME DIVERSE DELLO STESSO METHOD
+            //Il polimorfismo permette di ridefinire nelle classi derivate. Mentre l'overloading e applicabile unicamente sui membri della classe stessa
 
-            
+
             Console.WriteLine("somma interi");
             Console.WriteLine(Calculator.Sum(2, 8));
             Console.WriteLine();
